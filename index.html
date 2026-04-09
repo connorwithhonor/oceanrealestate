@@ -1,1 +1,578 @@
-{"id":"/index.html","path":"/index.html","sha":"e2cf0e587b4ca43a94c3a3ebb5a5067438988970","mime_type":"text/html","size":20851,"site_id":"d7a2fbc1-1579-4c22-af72-4f7ad4bf1018","deploy_id":"699cb61cee7d6f3d610a7385"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santa Clarita | Lakefront & Coastal Luxury Estates</title>
+  <!-- SEO keywords -->
+  <meta name="keywords" content="beach homes Santa Clarita, lakefront Santa Clarita, luxury waterfront, exclusive estates">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #1e2b3c;
+      line-height: 1.6;
+      background-color: #faf9f7;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    /* Hero section with the new image from CDN */
+    .hero {
+      background: linear-gradient(135deg, rgba(0,20,30,0.5) 0%, rgba(0,40,60,0.3) 100%), url('https://assets.cdn.filesafe.space/3z37W4oH1lMfraSObL1X/media/699cb448a08302d6ddb9362f.png') no-repeat center center/cover;
+      background-color: #1a3a4a; /* fallback */
+      height: 90vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      color: white;
+      position: relative;
+    }
+    .hero-overlay {
+      background: rgba(0, 30, 40, 0.3);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 2rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #c9a05e;
+      color: white;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-right: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    .btn:hover {
+      background: #b6894b;
+      transform: translateY(-2px);
+    }
+    .btn-outline:hover {
+      background: white;
+      color: #1e2b3c;
+    }
+    /* vivid subheading section */
+    .vivid-section {
+      padding: 5rem 0;
+      background: #fff;
+      text-align: center;
+    }
+    .vivid-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .vivid-item {
+      flex: 1 1 300px;
+      max-width: 350px;
+    }
+    .vivid-item i {
+      font-size: 3rem;
+      color: #c9a05e;
+      margin-bottom: 1rem;
+    }
+    .vivid-item h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .vivid-item p {
+      color: #4a5b6b;
+    }
+    /* slideshow / gallery */
+    .gallery {
+      padding: 5rem 0;
+      background: #f0efec;
+    }
+    .gallery h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      height: 280px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+    /* Connor & trust */
+    .agent-section {
+      padding: 5rem 0;
+      background: white;
+    }
+    .agent-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+    }
+    .agent-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .agent-image img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #c9a05e;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+    }
+    .agent-details {
+      flex: 2 1 400px;
+    }
+    .agent-details h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .trust-badge {
+      display: inline-block;
+      background: #e6d9c8;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 600;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+    .trust-badge i {
+      color: #c9a05e;
+      margin-right: 0.5rem;
+    }
+    /* forms section */
+    .forms-section {
+      padding: 5rem 0;
+      background: linear-gradient(145deg, #eae7e0, #ffffff);
+    }
+    .form-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    .form-card {
+      flex: 1 1 350px;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    }
+    .form-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #1e2b3c;
+    }
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+    .input-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .input-group input, .input-group textarea, .input-group select {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .input-group input[type="date"] {
+      padding: 0.8rem 1.2rem;
+    }
+    .btn-block {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    /* footer */
+    footer {
+      background: #1e2b3c;
+      color: #cddbe5;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    .footer-info p {
+      margin: 0.5rem 0;
+    }
+    .exemplar-note {
+      background: #2a3a4a;
+      padding: 0.8rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin: 1rem auto;
+      font-size: 0.9rem;
+    }
+    .keyword-strip {
+      background: #15232e;
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      word-spacing: 4px;
+    }
+    /* AI chat assistant */
+    .chat-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #c9a05e;
+      color: white;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      z-index: 999;
+      transition: all 0.3s;
+      border: none;
+    }
+    .chat-btn:hover {
+      background: #b6894b;
+      transform: scale(1.05);
+    }
+    .chat-window {
+      position: fixed;
+      bottom: 110px;
+      right: 30px;
+      width: 300px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: none;
+      overflow: hidden;
+    }
+    .chat-header {
+      background: #1e2b3c;
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    .chat-body {
+      padding: 1.5rem;
+      min-height: 150px;
+      background: #fafafa;
+    }
+    .chat-footer {
+      padding: 1rem;
+      border-top: 1px solid #ddd;
+      display: flex;
+    }
+    .chat-footer input {
+      flex: 1;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      outline: none;
+    }
+    .chat-footer button {
+      background: #c9a05e;
+      border: none;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      margin-left: 0.5rem;
+      cursor: pointer;
+    }
+    .close-chat {
+      float: right;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    /* responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      .hero { min-height: 600px; }
+      .btn { display: block; margin: 1rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (minimal) -->
+  <nav style="position: absolute; top:0; left:0; width:100%; padding:1.5rem 2rem; z-index:100; color:white; display:flex; justify-content:space-between; align-items:center;">
+    <div style="font-size:1.8rem; font-family:'Playfair Display'; font-weight:900;">🌊 SCV Waterfront</div>
+    <div><i class="fas fa-phone-alt"></i> Connor: 661-555-9820</div>
+  </nav>
+
+  <!-- Hero section with the new image from your CDN link -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Live on the Water – <br>Santa Clarita’s Exclusive Lakefront Estates</h1>
+      <p>Panoramic views, private docks, and the coastal lifestyle you've always dreamed of — even if SCV isn't coastal, we bring the ocean to you.</p>
+      <div>
+        <a href="#tour-form" class="btn"><i class="fas fa-calendar-alt"></i> Get Private Tour</a>
+        <a href="#listings-form" class="btn btn-outline"><i class="fas fa-envelope"></i> Send Me Listings</a>
+      </div>
+      <p style="font-size:1.2rem; margin-top:2rem;"><i class="fas fa-map-marker-alt"></i> Featuring “beach homes Santa Clarita” & “lakefront Santa Clarita”</p>
+    </div>
+  </section>
+
+  <!-- Vivid subheadings: lifestyle -->
+  <section class="vivid-section">
+    <div class="container">
+      <div class="vivid-grid">
+        <div class="vivid-item">
+          <i class="fas fa-sun"></i>
+          <h3>Wake up to sunset over the water</h3>
+          <p>Every morning a masterpiece of color reflected on the lake — your private infinity view.</p>
+        </div>
+        <div class="vivid-item">
+          <i class="fas fa-ship"></i>
+          <h3>Boating, beach life just minutes away</h3>
+          <p>Step from your backyard to kayaking, paddleboarding, and exclusive beach clubs.</p>
+        </div>
+        <div class="vivid-item">
+          <i class="fas fa-wine-glass-alt"></i>
+          <h3>Relaxation redefined</h3>
+          <p>Infinity pools, private docks, and spa architecture curated for serenity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slideshow / gallery of waterfront scenes -->
+  <section class="gallery">
+    <div class="container">
+      <h2>Waterfront Masterpieces</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1544984243-ec57ea16fe25?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connor's info + trust proofs -->
+  <section class="agent-section">
+    <div class="container agent-flex">
+      <div class="agent-image">
+        <!-- Connor placeholder -->
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Connor - Luxury Waterfront Specialist">
+      </div>
+      <div class="agent-details">
+        <h2>Connor Leigh <span style="font-size:1.8rem; color:#c9a05e;">★</span></h2>
+        <p style="font-size:1.3rem; margin-bottom:1rem;">Luxury Waterfront Specialist • 15+ years excellence</p>
+        <div style="margin-bottom:2rem;">
+          <span class="trust-badge"><i class="fas fa-award"></i> #1 Lakefront Agent 2023</span>
+          <span class="trust-badge"><i class="fas fa-trophy"></i> Top 1% Santa Clarita</span>
+          <span class="trust-badge"><i class="fas fa-star"></i> Luxury Retreats Expert</span>
+        </div>
+        <p style="font-size:1.1rem;">“My passion is matching discerning buyers with the ultimate waterfront lifestyle. Whether it's a lakefront mansion or a coastal-inspired retreat, I bring unparalleled market knowledge and white-glove service.”</p>
+        <p style="margin-top:1.5rem;"><i class="fas fa-phone-alt"></i> Connor Direct: (661) 555-9820 &nbsp;&nbsp; <i class="fas fa-envelope"></i> connor@scvwaterfront.com</p>
+        <p style="margin-top:0.5rem;"><small class="exemplar-note"><i class="fas fa-info-circle"></i> Exemplar site — representing our dream lake retreats in Santa Clarita.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead forms: tour with calendar + request more info -->
+  <section class="forms-section" id="forms">
+    <div class="container form-grid">
+      <!-- Schedule tour form (with calendar) -->
+      <div class="form-card" id="tour-form">
+        <h3><i class="fas fa-calendar-check"></i> Schedule a Private Tour</h3>
+        <form id="tourForm" onsubmit="event.preventDefault(); alert('Thank you! We’ll confirm your tour shortly.');">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="John Smith" required>
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="john@example.com" required>
+          </div>
+          <div class="input-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(661) 555-1234" required>
+          </div>
+          <div class="input-group">
+            <label>Preferred Tour Date</label>
+            <input type="date" required>
+          </div>
+          <button type="submit" class="btn btn-block">Get Private Tour <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+
+      <!-- Request more info / Send me listings form -->
+      <div class="form-card" id="listings-form">
+        <h3><i class="fas fa-envelope-open-text"></i> Request More Info</h3>
+        <p style="margin-bottom:1.5rem;">Get new lakefront & beach homes Santa Clarita instantly.</p>
+        <form id="listingsForm" onsubmit="event.preventDefault(); alert('Check your inbox for the latest listings!');">
+          <div class="input-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="input-group">
+            <label>I'm interested in</label>
+            <select style="width:100%; padding:0.9rem; border-radius:50px; border:1px solid #ccc;">
+              <option>Lakefront estates</option>
+              <option>Beach homes / coastal</option>
+              <option>Both</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-block">Send Me Listings <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional bottom lead capture -->
+  <section style="padding: 3rem 0; background: #1e2b3c; color: white; text-align: center;">
+    <div class="container">
+      <h2 style="color:white;">Dreaming of waterfront living?</h2>
+      <p style="margin-bottom:2rem;">Let’s find your perfect retreat — just fill in your email below.</p>
+      <div style="max-width:500px; margin:0 auto;">
+        <form onsubmit="event.preventDefault(); alert('We’ll be in touch!');" style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <input type="email" placeholder="Your email" style="flex:2 1 200px; padding:1rem; border-radius:50px; border:none;" required>
+          <button type="submit" class="btn" style="margin:0;">Request Info</button>
+        </form>
+        <p class="exemplar-note" style="margin-top:2rem; background:#2a3a4a;"><i class="fas fa-tag"></i> Keywords: beach homes Santa Clarita • lakefront Santa Clarita • luxury waterfront</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Connor info and exemplar note -->
+  <footer>
+    <div class="container">
+      <div class="footer-info">
+        <p><i class="fas fa-user-circle"></i> Connor Leigh — Luxury Waterfront Estates</p>
+        <p><i class="fas fa-map-pin"></i> 28325 Bouquet Canyon Rd, Santa Clarita, CA 91350</p>
+        <p><i class="fas fa-phone"></i> (661) 555-9820 &nbsp;|&nbsp; <i class="fas fa-envelope"></i> connor@scvwaterfront.com</p>
+        <p class="exemplar-note"><i class="fas fa-info-circle"></i> This is an exemplar site for demonstration. All properties represented are aspirational lake/coastal retreats in the Santa Clarita brand style.</p>
+        <p style="margin-top:1.5rem;">© 2025 SCV Waterfront Estates — Your dream lake retreat awaits.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Assistant Chat -->
+  <div class="chat-btn" id="chatBtn">
+    <i class="fas fa-robot"></i>
+  </div>
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      AI Realtor <span class="close-chat" id="closeChat"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <p><strong>AI:</strong> Hi! I'm your AI real estate assistant. Looking for waterfront deals in Santa Clarita? Ask me about lakefront or beach homes.</p>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="Type your question...">
+      <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <script>
+    // Simple AI chat toggle and mock interaction
+    const chatBtn = document.getElementById('chatBtn');
+    const chatWindow = document.getElementById('chatWindow');
+    const closeChat = document.getElementById('closeChat');
+    const sendBtn = document.getElementById('sendChat');
+    const chatInput = document.getElementById('chatInput');
+    const chatBody = document.getElementById('chatBody');
+
+    chatBtn.addEventListener('click', () => {
+      chatWindow.style.display = (chatWindow.style.display === 'block') ? 'none' : 'block';
+    });
+    closeChat.addEventListener('click', () => {
+      chatWindow.style.display = 'none';
+    });
+    sendBtn.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    function sendMessage() {
+      const msg = chatInput.value.trim();
+      if (!msg) return;
+      // Append user message
+      chatBody.innerHTML += `<p><strong>You:</strong> ${msg}</p>`;
+      // Mock AI response about waterfront keywords
+      setTimeout(() => {
+        let response = "I can help you find exclusive lakefront estates or beach homes in Santa Clarita. Would you like a private tour or new listings?";
+        if (msg.toLowerCase().includes('beach')) response = "Yes, we have stunning 'beach homes Santa Clarita' with coastal vibes. I can email you options right now!";
+        if (msg.toLowerCase().includes('lake')) response = "Our lakefront Santa Clarita estates feature private docks and panoramic sunsets. Schedule a tour above!";
+        chatBody.innerHTML += `<p><strong>AI:</strong> ${response}</p>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+      }, 500);
+      chatInput.value = '';
+    }
+
+    // Set default date to tomorrow
+    const dateInput = document.querySelector('input[type="date"]');
+    if (dateInput) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const yyyy = tomorrow.getFullYear();
+      const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+      const dd = String(tomorrow.getDate()).padStart(2, '0');
+      dateInput.value = `${yyyy}-${mm}-${dd}`;
+    }
+  </script>
+
+  <!-- Note about the hero image source -->
+  <div style="display:none;">Hero image: https://assets.cdn.filesafe.space/3z37W4oH1lMfraSObL1X/media/699cb448a08302d6ddb9362f.png</div>
+</body>
+</html>
